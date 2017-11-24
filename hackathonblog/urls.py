@@ -18,10 +18,13 @@ from django.contrib import admin
 from accounts import urls as accounts_urls
 from blog import urls as blog_urls
 from blog.views import blogposts
+from django.views import static
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', blogposts, name="index"),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^blog/', include(blog_urls)),
+    url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]

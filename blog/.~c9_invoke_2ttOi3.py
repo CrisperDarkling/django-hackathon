@@ -9,6 +9,6 @@ urlpatterns = [
     url(r'^posts/new/$', newpost, name="newpost"),
     url(r'^posts/(\d+)/edit/', editpost, name="editpost"),
     url(r'^posts/(\d+)/comments/add$', addcomment, name="addcomment"),
-    
+    url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     
     ]
