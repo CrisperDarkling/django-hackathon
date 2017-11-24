@@ -25,7 +25,9 @@ SECRET_KEY = 't_$%(&79j(9!t1x@s_!nu1vuw#=^=4g9yq7i(1^m^z^oezqg7a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'django-hackathon-crisperdarkling.c9users.io',
+]
 
 
 # Application definition
@@ -37,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'blog',
 ]
 
 MIDDLEWARE = [
